@@ -47,21 +47,21 @@ namespace TN01_WFcadastrar
             p1.NomeCompleto = txtNomeCompleto.Text;
             p1.DddTelefone = mkdTelefone.Text;
             p1.DataNascimento = dtpDataNascimento.Value;
-            p1.Escolaridade = cbxEscolaridade.Text;
+            p1.Escolaridade = cbxEscolaridade.SelectedItem?.ToString();
             p1.RendaMensal = Convert.ToDouble(nudRendaMensal.Text);
-            p1.Sexo = 'n';
-            p1.PossuiFilhos = chkPossuiFilhos.Checked;
+            
+
             if (rdbMasculino.Checked)
             {
-                p1.Sexo = 'm';
+                p1.Sexo = 'M';
             }
             else if (rdbFeminino.Checked)
             {
-                p1.Sexo = 'f';
+                p1.Sexo = 'F';
             }
             else if (rdbNaoInformar.Checked)
             {
-                p1.Sexo = 'n';
+                p1.Sexo = 'N';
             }
             else
             {
